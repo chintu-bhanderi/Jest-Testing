@@ -7,3 +7,9 @@ test('Greet render correctly',()=>{
     expect(textElement).toBeInTheDocument();
 })
 
+test('Greet render with name',()=>{
+    render(<Greet name='Vishwas'/>)
+    const textElement = screen.getByText("Hello Vishwas")
+    expect(textElement).toBeInTheDocument();
+})
+
